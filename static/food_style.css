@@ -1,0 +1,51 @@
+.menu{
+    display:flex;
+    flex-direction: column;
+    height:80vh;
+    position:absolute;
+    top:25%;
+    overflow-y: scroll;
+    width:100%;
+
+}
+
+.item{
+    background-color: #1A1A1A;
+    color:white;
+    padding:10px;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+
+    
+
+}
+
+img{
+    height: 100px;
+    width:110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left:20px;
+}
+
+h2{
+    padding:0;
+    margin:0;
+}
+
+.submit{
+    background-color: green;
+}
+
+.hidden{
+    display:none; 
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles.css" class="stylesh">
+    <link rel="stylesheet"href="../static/food_style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="user">
+            <img src="../static/images/profile.jpg" width="40px"alt=""class="profile_pic">
+         <h2 class="greeting">Heyy {{name}}!!</h2>
+      </div>
+      <div class="notification"><img class="bell"src="../static/images/chuckoo.png"  alt="" height="20px" width="20px"></div>
+    </div>
+    <div class="search_box">
+    <button>
+    <img class="icon" src="../static/images/search.png"height="20px"></button>
+        <input class="search" value="       Search for food, juice and more" type="search">
+    </div>
+    <form method="post" class="menu">
+        {%for item in food%}
+            <div class="item">
+                <input type="text" value={{item[0]}} class="hidden" id="hidden" name="hidden"> 
+                <input type="submit" href="index" value={{item[0]}} name='submit'>
+                <div class="right"> <h2 class="name">{{item[0]}}</h2><p class="price">Rs. {{item[1]}}</p></div>
+                <img class="left" height="100px" src= {{item[2]}}> 
+            </div>
+            
+         
+
+        {%endfor%}
+
+
+        </form>
+   
+    <div class="nav_bar">
+        <div class="item home">Home</div>
+        <div class="item favorites">Favourites</div>
+        <div class="item profile">Profile</div>
+    </div>
+
+</body>
+</html>
